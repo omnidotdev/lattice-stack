@@ -10,5 +10,5 @@
 
 services:
   # Lattice server - federated GraphQL gateway
-  - lattice-server:
-      repo: git@github.com:omnidotdev/lattice-server#master
+  - lattice-gateway:
+      repo: git@github.com:omnidotdev/lattice-gateway#master
