@@ -37,12 +37,12 @@ for service in services:
 # ------------------------------------
 # Lattice server
 # ------------------------------------
-server_path = "services/lattice-server"
+server_path = "services/lattice"
 
 if os.path.exists(server_path):
     local_resource(
         "build-lattice",
-        cmd="cargo build --release -p lattice-gateway",
+        cmd="cargo build --release -p lattice-cli",
         dir=server_path,
         deps=[
             "%s/core" % server_path,
@@ -54,7 +54,7 @@ if os.path.exists(server_path):
 
     local_resource(
         "dev-lattice",
-        serve_cmd="cargo run -p lattice-gateway -- --schema supergraph.graphql --listen-address 0.0.0.0:4000",
+        serve_cmd="cargo run -p lattice-cli -- serve --config lattice.yaml",
         serve_dir=server_path,
         resource_deps=["build-lattice"],
         readiness_probe=probe(
@@ -68,4 +68,4 @@ if os.path.exists(server_path):
         labels=["lattice"],
     )
 else:
-    print(color.yellow("lattice-server not found - run services bootstrap first"))
+    print(color.yellow("lattice not found - run services bootstrap first"))

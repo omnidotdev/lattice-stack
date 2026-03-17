@@ -9,6 +9,6 @@
 #         env: environment variables (optional)
 
 services:
-  # Lattice server - federated GraphQL gateway
-  - lattice-gateway:
-      repo: git@github.com:omnidotdev/lattice-gateway#master
+  # Lattice - federated GraphQL gateway
+  - lattice:
+      repo: git@github.com:omnidotdev/lattice#master

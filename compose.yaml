@@ -1,11 +1,11 @@
 services:
   gateway:
-    image: ghcr.io/omnidotdev/lattice-gateway:latest
+    image: ghcr.io/omnidotdev/lattice:latest
     environment:
       RUST_LOG: ${RUST_LOG:-info}
     volumes:
       - ./supergraph.graphql:/etc/lattice/supergraph.graphql:ro
-    command: ["--schema", "/etc/lattice/supergraph.graphql", "--listen-address", "0.0.0.0:4000"]
+    command: ["--config", "/etc/lattice/lattice.yaml"]
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:4000/health || exit 1"]
       interval: 5s
