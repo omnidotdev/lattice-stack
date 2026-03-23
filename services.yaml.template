@@ -12,3 +12,7 @@ services:
   # Lattice - federated GraphQL gateway
   - lattice:
       repo: git@github.com:omnidotdev/lattice#master
+
+  # Lattice site - marketing/landing page
+  - lattice-site:
+      repo: git@github.com:omnidotdev/lattice-site#master

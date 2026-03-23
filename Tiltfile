@@ -69,3 +69,13 @@ if os.path.exists(server_path):
     )
 else:
     print(color.yellow("lattice not found - run services bootstrap first"))
+
+# ------------------------------------
+# Lattice site
+# ------------------------------------
+site_path = "services/lattice-site"
+
+if os.path.exists(site_path):
+    include("%s/Tiltfile" % site_path)
+else:
+    print(color.yellow("lattice-site not found - run services bootstrap first"))
