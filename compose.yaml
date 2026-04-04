@@ -1,6 +1,6 @@
 services:
   gateway:
-    image: ghcr.io/omnidotdev/lattice:latest
+    image: manifold.omni.dev/omnidotdev/lattice:latest
     environment:
       RUST_LOG: ${RUST_LOG:-info}
     volumes:
