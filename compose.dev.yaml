@@ -1,0 +1,7 @@
+# Development override - build the gateway from source instead of pulling the image.
+# Usage: docker compose -f compose.yaml -f compose.dev.yaml up
+
+services:
+  gateway:
+    build: ./services/lattice
+    image: lattice:dev
