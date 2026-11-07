@@ -35,7 +35,7 @@ To build the gateway from source instead of pulling the image:
 docker compose -f compose.yaml -f compose.dev.yaml up
 ```
 
-The gateway reads a `lattice.yaml` config and a composed `supergraph.graphql` mounted into the container. See the [documentation](https://lattice.omni.dev) for configuration, authentication, and plugin details.
+The gateway reads a `lattice.yaml` config and a composed `supergraph.graphql` mounted into the container. See the [documentation](https://docs.omni.dev/products/lattice) for configuration, authentication, and plugin details.
 
 ## License
 
