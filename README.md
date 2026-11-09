@@ -1,4 +1,11 @@
-# 🔲 Lattice Metarepo
+<div align="center">
+  <img src="./assets/logo.png" width="100" />
+
+  <h1 align="center">Lattice Metarepo</h1>
+
+[Website](https://lattice.omni.dev) | [Docs](https://docs.omni.dev/products/lattice) | [Discord](https://discord.gg/omnidotdev) | [X](https://x.com/omnidotdev) | [Threads](https://www.threads.com/@omnidotdev)
+
+</div>
 
 This is the metarepo for the Lattice service stack.
 
